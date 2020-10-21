@@ -1,5 +1,6 @@
 module.exports = {
   plugins: [
+    "gatsby-plugin-typescript",
     {
       resolve: `gatsby-source-contentful`,
       options: {
@@ -8,4 +9,4 @@ module.exports = {
       },
     },
   ],
-}
+};
