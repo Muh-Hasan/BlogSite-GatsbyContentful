@@ -1,10 +1,14 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React from 'react'
+import { graphql } from 'gatsby'
 
-export default function Home() {
-  return <div>hello world</div>
+export default function BlogOne({ data }){
+    return (
+        <div>
+            {data.allContentfulBlogPosts.edges[0].node.userName}
+        </div>
+    )
+
 }
-
 export const qurey = graphql`
   query {
     allContentfulBlogPosts {
