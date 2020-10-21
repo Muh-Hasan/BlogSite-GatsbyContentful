@@ -1,8 +1,16 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { Link } from "gatsby"
 
-export default function Home() {
-  return <div>hello world</div>
+export default function Home({ data }) {
+  return (
+    <>
+      <div>hello wrld</div>
+      {data.allContentfulBlogPosts.edges.map(item => (
+        <Link to={`/blogs/${item.node.userName}/${item.node.title}`}>{item.node.title}</Link>
+      ))}
+    </>
+  )
 }
 
 export const qurey = graphql`

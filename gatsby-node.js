@@ -1,3 +1,4 @@
+const path = require("path")
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   const result = await graphql(`
@@ -12,11 +13,13 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `)
-  result.data.allContentfulBlogPosts.edges.foreach(item => {
-    console.log(item);
-      // createPage({
-      //   path: `/blogs/${item.title}`,
-      //   component:,
-      // })
+  result.data.allContentfulBlogPosts.edges.forEach(item => {
+    createPage({
+      path: `/blogs/${item.node.userName}/${item.node.title}`,
+      component: path.resolve("./src/blogs/blog1.tsx"),
+      context: {
+        data: item.node,
+      },
+    })
   })
 }
