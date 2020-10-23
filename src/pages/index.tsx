@@ -7,7 +7,9 @@ export default function Home({ data }) {
     <>
       <div>hello wrld</div>
       {data.allContentfulBlogPosts.edges.map(item => (
-        <Link to={`/blogs/${item.node.userName}/${item.node.title}`}>{item.node.title}</Link>
+        <Link to={`/blogs/${item.node.userName}/${item.node.title}`}>
+          {item.node.title}
+        </Link>
       ))}
     </>
   )
