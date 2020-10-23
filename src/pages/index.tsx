@@ -6,10 +6,10 @@ export default function Home({ data }) {
   return (
     <>
       <div>hello wrld</div>
-      {data.allContentfulBlogPosts.edges.map(item => (
-        <Link to={`/blogs/${item.node.title}`}>
-          {item.node.title}
-        </Link>
+      {data.allContentfulBlogPosts.edges.map((item: { node: { title: string } }) => (
+        <div key={item.node.title}>
+        <Link to={`/blogs/${item.node.title}`}>{item.node.title}</Link>
+        </div>
       ))}
     </>
   )
@@ -20,23 +20,7 @@ export const qurey = graphql`
     allContentfulBlogPosts {
       edges {
         node {
-          publicationDate
-          userName
-          updatedAt
-          userImage {
-            file {
-              url
-            }
-          }
           title
-          image {
-            file {
-              url
-            }
-          }
-          content {
-            content
-          }
         }
       }
     }
