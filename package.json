@@ -15,8 +15,12 @@
   },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^14.1.1",
+    "dark-mode-switch": "^1.0.0",
     "dotenv": "^8.2.0",
+    "firebase": "^7.24.0",
     "gatsby": "^2.24.79",
+    "gatsby-plugin-dark-mode": "^1.1.2",
+    "gatsby-plugin-firebase": "^0.2.0-beta.4",
     "gatsby-plugin-typescript": "^2.4.24",
     "gatsby-source-contentful": "^3.0.2",
     "react": "^16.12.0",
