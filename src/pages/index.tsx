@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { Link } from "gatsby"
-import NavBar from "../components/navbar"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import moment from "moment"
 import styles from "../styles/index.module.css"

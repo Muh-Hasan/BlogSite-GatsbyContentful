@@ -1,7 +1,36 @@
 article {
-    display: grid;
-    grid-template-columns: 1fr 740px 1fr;
+  display: grid;
+  grid-template-columns: 1fr 740px 1fr;
 }
 article > * {
-    grid-column: 2;
+  grid-column: 2;
+}
+.intro-blog {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+.title {
+  font-size: 40px;
+}
+.userName {
+  font-size: 15px;
+  letter-spacing: 1px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.date {
+  font-size: 15px;
+  margin-left: 8px;
+  margin-top: 10px;
+  flex-grow: 1;
+  color: #776c6c;
+}
+.avatar {
+  margin-right: 10px;
+}
+.para {
+  line-height: 22px;
+  margin-top: 10px;
 }
