@@ -5,7 +5,6 @@ dotenv.config()
 module.exports = {
   plugins: [
     "gatsby-plugin-typescript",
-    "gatsby-plugin-dark-mode",
     "gatsby-plugin-material-ui",
     {
       resolve: `gatsby-source-contentful`,

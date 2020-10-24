@@ -1,0 +1,15 @@
+*{
+  padding: 0;
+}
+.main{
+  width: 50%;
+  margin: 0 auto;
+}
+.headimg{
+  height: 400px;
+  width: 50%;
+}
+.card{
+  width: 50%;
+  height: auto;
+}

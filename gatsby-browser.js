@@ -1,2 +1,2 @@
 import "firebase/auth"
-import './src/stlyes/global.css'
+import './src/styles/global.css'
