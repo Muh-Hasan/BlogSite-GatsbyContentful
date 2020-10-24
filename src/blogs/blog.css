@@ -21,7 +21,7 @@ article > * {
   font-weight: 500;
   font-size: 15px;
   letter-spacing: 1px;
-  
+
   margin-top: 10px;
   margin-left: 10px;
 }
@@ -42,4 +42,8 @@ article > * {
 }
 .MuiBadge-colorPrimary {
   background-color: #868686 !important;
+}
+.back {
+  margin-top: 7px;
+  cursor: pointer;
 }

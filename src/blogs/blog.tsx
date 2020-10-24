@@ -9,7 +9,9 @@ import { makeStyles, createStyles, Theme } from "@material-ui/core/styles"
 import Badge from "@material-ui/core/Badge"
 import Divider from "@material-ui/core/Divider"
 import Footer from "../components/footer"
-import NavBar from '../components/navbar'
+import NavBar from "../components/navbar"
+import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos"
+import { Link } from "gatsby"
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -25,10 +27,15 @@ export default function Blog({ pageContext: { data } }) {
 
   return (
     <>
-    <NavBar />
+      <NavBar />
       <article>
         <h1 className="title">{data.title}.</h1>
         <div className="intro-blog">
+          <span className="back">
+            <Link to="/">
+              <ArrowBackIosIcon />
+            </Link>
+          </span>{" "}
           <span>
             <Avatar src={data.userImage.file.url} className={classes.large} />{" "}
           </span>
@@ -49,7 +56,6 @@ export default function Blog({ pageContext: { data } }) {
         </div>
         <figure>
           <img src={data.image.file.url} />
-          
         </figure>
         <p className="para">{documentToReactComponents(data.content.json)}</p>
         <br />

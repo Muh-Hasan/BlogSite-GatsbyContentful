@@ -4,10 +4,12 @@ import { Link } from "gatsby"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import moment from "moment"
 import styles from "../styles/index.module.css"
+import NavBar from '../components/navbar'
 
 export default function Home({ data }) {
   return (
     <div>
+      <NavBar />
       <div className={styles.mian}>
         <div>
           {data.allContentfulBlogPosts.edges.map((item, i: number) => (
