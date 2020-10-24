@@ -6,6 +6,8 @@ import CssBaseline from "@material-ui/core/CssBaseline"
 import useScrollTrigger from "@material-ui/core/useScrollTrigger"
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles"
 import Button from "@material-ui/core/Button"
+import firebase from 'gatsby-plugin-firebase'
+import SimpleModal from './modal'
 
 interface Props {
   window?: () => Window
@@ -37,7 +39,6 @@ const useStyles = makeStyles((theme: Theme) =>
 
 export default function NavBar(props: Props) {
   const classes = useStyles()
-
   return (
     <React.Fragment>
       <CssBaseline />
@@ -47,7 +48,7 @@ export default function NavBar(props: Props) {
             <Typography variant="h6" className={classes.title}>
               News
             </Typography>
-            <Button color="inherit">Login</Button>
+            <Button color="inherit" >Login</Button>
           </Toolbar>
         </AppBar>
       </ElevationScroll>
