@@ -1,12 +1,45 @@
-.footer {
-    height: 50px;
-    width: 100%;
-    background-color: black;
+* {
+  text-decoration: none;
+  color: black;
 }
-.logo-footer{
-    color: white;
-    font-size: 30px;
-    letter-spacing: 1px;
-    padding-top: 6px;
-    padding-left: 10px;
+.footer {
+  height: 50px;
+  width: 100%;
+  background-color: black;
+}
+.logo-footer {
+  color: white;
+  font-size: 30px;
+  letter-spacing: 1px;
+  padding-top: 6px;
+  padding-left: 10px;
+}
+.navbar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 50px;
+  margin-bottom: 20px;
+}
+.nav-logo {
+  flex-grow: 1;
+  margin-top: 10px;
+}
+.nav-logo h3 {
+  font-size: 24px;
+  margin-left: 20px;
+}
+.sp-one {
+  margin-right: 10px;
+  font-size: 15px;
+  font-weight: 500;
+}
+.nav-log {
+  margin-top: 10px;
+}
+.log-btn {
+  margin-right: 10px;
+  padding: 3px;
+  background: none;
+  border: 2px solid black;
 }

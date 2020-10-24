@@ -9,6 +9,7 @@ import { makeStyles, createStyles, Theme } from "@material-ui/core/styles"
 import Badge from "@material-ui/core/Badge"
 import Divider from "@material-ui/core/Divider"
 import Footer from "../components/footer"
+import NavBar from '../components/navbar'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -24,6 +25,7 @@ export default function Blog({ pageContext: { data } }) {
 
   return (
     <>
+    <NavBar />
       <article>
         <h1 className="title">{data.title}.</h1>
         <div className="intro-blog">
