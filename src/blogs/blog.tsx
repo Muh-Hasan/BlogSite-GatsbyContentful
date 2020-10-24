@@ -7,8 +7,8 @@ import ChatBubbleOutlineOutlinedIcon from "@material-ui/icons/ChatBubbleOutlineO
 import Avatar from "@material-ui/core/Avatar"
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles"
 import Badge from "@material-ui/core/Badge"
-import Divider from '@material-ui/core/Divider';
-import Footer from '../components/footer'
+import Divider from "@material-ui/core/Divider"
+import Footer from "../components/footer"
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -24,35 +24,38 @@ export default function Blog({ pageContext: { data } }) {
 
   return (
     <>
-    <article>
-      <h1 className='title'>{data.title}.</h1>
-      <div className='intro-blog'>
-        <span>
-          <Avatar src={data.userImage.file.url} className={classes.large} />{" "}
-        </span>
-        <span className='userName'>{data.userName}</span>{" "}
-        <span className='date'>{moment(data.publicationDate).format("D MMM")}</span>
-        <span className='avatar'>
-          <Badge badgeContent={4} color="primary">
-            <ThumbUpAltOutlinedIcon />
-          </Badge>
-        </span>
-        <span className='avatar'>
-          <Badge badgeContent={4} color="primary">
-            <ChatBubbleOutlineOutlinedIcon />
-          </Badge>
-        </span>
-      </div>
-      <figure>
-        <img src={data.image.file.url} />
-      </figure>
-      <p className='para'>{documentToReactComponents(data.content.json)}</p>
+      <article>
+        <h1 className="title">{data.title}.</h1>
+        <div className="intro-blog">
+          <span>
+            <Avatar src={data.userImage.file.url} className={classes.large} />{" "}
+          </span>
+          <span className="userName">{data.userName}</span>{" "}
+          <span className="date">
+            {moment(data.publicationDate).format("D MMM")}
+          </span>
+          <span className="avatar">
+            <Badge badgeContent={4} color="primary">
+              <ThumbUpAltOutlinedIcon />
+            </Badge>
+          </span>
+          <span className="avatar">
+            <Badge badgeContent={4} color="primary">
+              <ChatBubbleOutlineOutlinedIcon />
+            </Badge>
+          </span>
+        </div>
+        <figure>
+          <img src={data.image.file.url} />
+          
+        </figure>
+        <p className="para">{documentToReactComponents(data.content.json)}</p>
+        <br />
+        <Divider variant="middle" />
+      </article>
       <br />
-      <Divider variant="middle" />
-    </article>
-    <br />
-    <br />
-    <Footer />
+      <br />
+      <Footer />
     </>
   )
 }

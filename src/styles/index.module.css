@@ -1,15 +1,16 @@
-*{
+* {
   padding: 0;
 }
-.main{
+.main {
   width: 50%;
   margin: 0 auto;
 }
-.headimg{
+.headimg {
   height: 400px;
   width: 50%;
 }
-.card{
+.card {
   width: 50%;
+  
   height: auto;
 }
