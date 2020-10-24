@@ -8,7 +8,7 @@ import { useSelector } from "react-redux"
 
 export default function NavBar() {
   const [name, setName] = useState("")
-  const login = useSelector(state => state.login)
+  const login = useSelector((state: {login : boolean}) => state.login)
   firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
       setName(user.displayName)

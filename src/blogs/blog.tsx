@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme: Theme) =>
 
 export default function Blog({ pageContext: { data } }) {
   const classes = useStyles()
-  const loggedIn = useSelector(state => state.login)
+  const loggedIn = useSelector((state: {login : boolean}) => state.login)
   console.log(loggedIn)
 
   firebase.auth().onAuthStateChanged(function (user) {

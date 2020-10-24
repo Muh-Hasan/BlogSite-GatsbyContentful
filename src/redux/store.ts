@@ -1,17 +1,18 @@
-import { createSlice, configureStore } from "@reduxjs/toolkit"
+import { createSlice, configureStore} from "@reduxjs/toolkit"
 
 const authPage = createSlice({
   name: "Auth Page",
-  initialState: { login: false },
+  initialState: {login: false},
   reducers: {
     setLoggedIn: (state, action) => {
-      state.login = action.payload
+        state.login=action.payload
     },
   },
 })
 
-const store = configureStore({ reducer: authPage.reducer })
+const store = configureStore({ reducer: authPage.reducer });
 
-export const { setLoggedIn } = authPage.actions
+export const { setLoggedIn } = authPage.actions;
 
-export { store, authPage }
+
+export { store, authPage };
