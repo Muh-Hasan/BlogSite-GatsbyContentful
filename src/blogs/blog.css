@@ -47,3 +47,15 @@ article > * {
   margin-top: 7px;
   cursor: pointer;
 }
+.notlogged {
+  height: 30px;
+  overflow: hidden;
+}
+.log-btnn {
+  cursor: pointer;
+  width: 20%;
+  margin-top: 10px;
+  padding: 2px;
+  background: none;
+  border: 2px solid black;
+}
