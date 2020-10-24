@@ -45,19 +45,25 @@ export default function Home({ data }) {
                   />
                 </span>{" "}
                 <span className={styles.userName}>{item.node.userName}</span>{" "}
-                <span className={styles.date}>{moment(item.node.publicationDate).format("D MMM")}</span>{" "}
+                <span className={styles.date}>
+                  {moment(item.node.publicationDate).format("D MMM")}
+                </span>{" "}
               </div>
               <div>
-                <p className={styles.para}>{documentToReactComponents(item.node.content.json)}</p>
+                <p className={styles.para}>
+                  {documentToReactComponents(item.node.content.json)}
+                </p>
               </div>
-              <div>
-              <button><Link to={`/blogs/${item.node.title}`}>Read more</Link></button>
+              <div className={styles.btn}>
+                <button>
+                  <Link to={`/blogs/${item.node.title}`}>Read more</Link>
+                </button>
               </div>
             </div>
           ))}
         </div>
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   )
 }

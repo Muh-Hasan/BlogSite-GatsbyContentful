@@ -48,7 +48,7 @@ article > * {
   cursor: pointer;
 }
 .notlogged {
-  height: 30px;
+  height: 40px;
   overflow: hidden;
 }
 .log-btnn {

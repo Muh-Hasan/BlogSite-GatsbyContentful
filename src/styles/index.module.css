@@ -1,4 +1,4 @@
-.disFlex{
+.disFlex {
   margin-top: 20px;
   display: flex;
   flex-direction: row;
@@ -15,24 +15,24 @@
   color: white;
   padding-top: 250px;
 }
-.topicImg img{
+.topicImg img {
   height: 250px;
   width: 328px;
   margin: 10px;
 }
-.box{
+.box {
   height: auto;
   width: 350px;
-  border: 1px solid black;
+  margin-bottom: 20px;
 }
-.para{
+.para {
   height: 32px;
   overflow: hidden;
   margin-left: 10px;
   font-size: 12px;
   margin-bottom: 3px;
 }
-.userdet{
+.userdet {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -57,7 +57,16 @@
   cursor: pointer;
   margin-left: 10px;
 }
-.title{
+.title {
   margin-left: 10px;
+  margin-bottom: 5px;
+}
+.btn {
+  margin-left: 10px;
+}
+.btn button {
+  padding: 3px;
+  background: none;
+  border: 1px solid black;
   margin-bottom: 5px;
 }
