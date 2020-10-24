@@ -1,0 +1,12 @@
+.footer {
+    height: 50px;
+    width: 100%;
+    background-color: black;
+}
+.logo-footer{
+    color: white;
+    font-size: 30px;
+    letter-spacing: 1px;
+    padding-top: 6px;
+    padding-left: 10px;
+}

@@ -7,6 +7,8 @@ import ChatBubbleOutlineOutlinedIcon from "@material-ui/icons/ChatBubbleOutlineO
 import Avatar from "@material-ui/core/Avatar"
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles"
 import Badge from "@material-ui/core/Badge"
+import Divider from '@material-ui/core/Divider';
+import Footer from '../components/footer'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -21,8 +23,9 @@ export default function Blog({ pageContext: { data } }) {
   const classes = useStyles()
 
   return (
+    <>
     <article>
-      <h1 className='title'>{data.title}</h1>
+      <h1 className='title'>{data.title}.</h1>
       <div className='intro-blog'>
         <span>
           <Avatar src={data.userImage.file.url} className={classes.large} />{" "}
@@ -45,6 +48,11 @@ export default function Blog({ pageContext: { data } }) {
       </figure>
       <p className='para'>{documentToReactComponents(data.content.json)}</p>
       <br />
+      <Divider variant="middle" />
     </article>
+    <br />
+    <br />
+    <Footer />
+    </>
   )
 }
