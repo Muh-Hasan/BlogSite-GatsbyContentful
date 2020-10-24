@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import "./blog.css"
 import moment from "moment"
